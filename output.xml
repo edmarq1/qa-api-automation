@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.14.3 on win32)" generated="2026-02-22T13:05:20.021021" rpa="false" schemaversion="5">
+<suite id="s1" name="Reqres" source="C:\Projetos\qa-api-automation\tests\reqres.robot">
+<test id="s1-t1" name="GET lista de usuarios (ReqRes)" line="5">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2026-02-22T13:05:20.101268" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+<msg time="2026-02-22T13:05:20.101686" level="FAIL">TypeError: RequestsKeywords.session_less_get() missing 1 required positional argument: 'url'</msg>
+<var>${resp}</var>
+<arg>https://reqres.in/api/users?page=2</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2026-02-22T13:05:20.101163" elapsed="0.001003">TypeError: RequestsKeywords.session_less_get() missing 1 required positional argument: 'url'</status>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2026-02-22T13:05:20.102412" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-02-22T13:05:20.100660" elapsed="0.001995">TypeError: RequestsKeywords.session_less_get() missing 1 required positional argument: 'url'</status>
+</test>
+<status status="FAIL" start="2026-02-22T13:05:20.022133" elapsed="0.081104"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Reqres">Reqres</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-22T13:05:20.101268" level="WARN">You might have an = symbol in url. You better place 'url=' before, example: 'url=/your-url/foo?param=a' or use '/your-url/foo  params=param=a' or escape it</msg>
+</errors>
+</robot>
