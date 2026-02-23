@@ -32,6 +32,12 @@ jobs:
       - name: Start and Wait for ServeRest
         run: docker compose up -d --wait --wait-timeout 60
 
+      - name: Debug Container Logs on Failure
+        if: failure() # Só roda se o passo anterior falhar
+        run: |
+          docker compose ps
+          docker compose logs serverest
+
       - name: Run Robot (smoke)
         run: python -m robot -d results -P resources tests/smoke
 
