@@ -1,0 +1,5 @@
+services:
+  serverest:
+    image: paulogoncalvesbh/serverest:latest
+    ports:
+      - "3000:3000"

@@ -1,9 +1,9 @@
 .env
 # Robot Framework outputs
 results/
-reports/
-output.xml
-log.xml
-report.html
 log.html
+report.html
+output.xml
+logs/
+
 
