@@ -12,3 +12,4 @@ Status page is reachable (local only)
 ServeRest can list users
     ${resp}=    GET ServeRest    /usuarios    200
     Should Be Equal As Numbers    ${resp.status_code}    200
+    
