@@ -24,8 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Set up Docker Compose
-        uses: docker/setup-compose-action@v1
+      # - name: Set up Docker Compose
+      # uses: docker/setup-compose-action@v1
         # Instala somente se não existir no runner
         # (mantém o pipeline estável) [web:579]
 
@@ -42,7 +42,7 @@ jobs:
         run: python -m robot -d results -P resources tests/smoke
 
       - name: Upload Robot results
-        if: always()
+        if: always() && !env.ACT
         uses: actions/upload-artifact@v4
         with:
           name: robot-results

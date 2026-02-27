@@ -1,4 +1,5 @@
 .env
+.actrc
 # Robot Framework outputs
 results/
 log.html
